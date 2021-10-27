@@ -1,13 +1,19 @@
 # binsearch
 
-Get results for exam scores
+binary search algorithm
+
+Note: this will be in vain because bisect module in Python 3.10 has key function argument
+
+## Usage
+
+### Get results for exam scores
 
 ```
 from binsearch import BinSearch
 
 grade = BinSearch([(85,"A"), (75,"B"), (65,"C"), (55,"D"), (0,"E")], sort=True)
 for point in [54,55,64,65,74,75,84,85]:
-    print('{} - {}'.format(point, grade.find(point)))
+    print('{} - {}'.format(point, grade(point)))
 ```
 
 ```
@@ -15,10 +21,10 @@ from binsearch import BinSearch
 
 grade = BinSearch({85:"A", 75:"B", 65:"C", 55:"D", 0:"E"})
 for point in [54,55,64,65,74,75,84,85]:
-    print('{} - {}'.format(point, grade.find(point)))
+    print('{} - {}'.format(point, grade(point)))
 ```
 
-Convert date into Japan era (Gengou) format
+### Convert date into Japan era (Gengou) format
 
 ```
 from binsearch import BinSearch
